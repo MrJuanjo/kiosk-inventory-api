@@ -1,21 +1,25 @@
-# Entornos virtuales
+# Virtual enviroment
 .venv/
 env/
 venv/
 
-# Archivos de cache
+# Local databases
+*.db
+*.sqlite3
+
+# Cache files
 __pycache__/
 *.py[cod]
 *$py.class
 
-# Archivos de configuración local y variables de entorno secretas
+# Local secret files
 .env
 *.env
 
-# Editores de codigo
+# IDEs
 .vscode/
 .idea/
 
-# Archivos del sistema operativo
+# OS Files
 .DS_Store
 Thumbs.db
