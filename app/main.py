@@ -2,6 +2,7 @@ from fastapi import FastAPI, status
 
 import app.models
 from app.database import Base, engine
+from app.routers import products
 
 Base.metadata.create_all(bind=engine)
 
@@ -10,6 +11,8 @@ app = FastAPI(
     description="REST API for managing inventory in a candy, beverage, and snack kiosk.",
     version="0.1.0",
 )
+
+app.include_router(products.router)
 
 
 @app.get("/")
